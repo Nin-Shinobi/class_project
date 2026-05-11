@@ -1,0 +1,315 @@
+/* panneau de contrôle */
+:root {
+    --primary-color: #00ffcc;
+    --bg-dark: #0a0a0a;
+    --card-bg: #161616;
+    --text-color: #e0e0e0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    /*Supprime les marges par défaut*/
+    overflow-x: hidden;
+    /* overflow-x pour delete la barre de défilement*/
+}
+
+/* animation du titre */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 16px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.9);
+    border-bottom: 1px solid rgba(0, 255, 204, 0.15);
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(20px, 3vw, 28px);
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 0.3em;
+    font-weight: 700;
+    text-shadow: none;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 14px;
+    font-weight: 600;
+    border-radius: 999px;
+    transition: 0.2s ease;
+    background: rgba(255, 255, 255, 0.04);
+    font-size: 13px;
+}
+
+.nav a:hover {
+    color: #000;
+    background: var(--primary-color);
+}
+
+/* sections en bloc */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 10%;
+    /*Centre tout le contenu horizontalement.*/
+    padding: 20px;
+}
+
+section {
+    background: var(--card-bg);
+    margin-bottom: 50px;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    /*Le bloc remonte de 5px quand on passe la souris dessus.*/
+}
+
+footer {
+    text-align: center;
+    margin-top: 22%;
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.nom {
+    color: deeppink;
+    font-weight: bold;
+}
+
+/* le bloc formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 100%;
+}
+
+input,
+textarea {
+    background: #222;
+    border: 1px solid #444;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.but {
+    background: var(--primary-color);
+    color: black;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.but:hover {
+    filter: brightness(1.2);
+    /*Rend la couleur un peu plus flash quand on survole.*/
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* Animation de Scroll*/
+.reveal {
+    position: relative;
+    /*Permet au bloc de bouger par rapport à sa place normale.*/
+    transform: translateY(100px);
+    /*Pousse le bloc 100px vers le bas*/
+    opacity: 0;
+    /*Rend le bloc invisible au départ.*/
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.reseaux {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /*Espacement entre les icônes*/
+}
+
+.reseaux a {
+    color: var(--primary-color);
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+.reseaux a:hover {
+    transform: scale(1.2);
+    /*Grossit l’icône de 20% quand on passe la souris dessus.*/
+    color: deeppink;
+}
+
+/* Styles pour le tableau des contacts */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 255, 204, 0.25);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.contact-table {
+    width: 100%;
+    min-width: 740px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background: transparent;
+}
+
+.contact-table th,
+.contact-table td {
+    padding: 16px 18px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-table th {
+    background: rgba(0, 255, 204, 0.12);
+    color: #e0e0e0;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.contact-table tbody tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.contact-table tbody tr:hover {
+    background: rgba(0, 255, 204, 0.1);
+}
+
+.contact-table td {
+    color: var(--text-color);
+    vertical-align: middle;
+}
+
+.contact-table td:first-child {
+    width: 62px;
+}
+
+.contact-table td:nth-child(2) {
+    width: 60px;
+    color: #8bf;
+    font-weight: 600;
+}
+
+.contact-table td:nth-child(5) {
+    max-width: 420px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.checkbox {
+    transform: scale(1.1);
+    accent-color: var(--primary-color);
+}
+
+.edit-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.edit-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.delete-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.delete-btn {
+    background: linear-gradient(135deg, #ff5c70, #ff2a5c);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 999px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.delete-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 30px rgba(255, 76, 97, 0.35);
+}
+
+.checkbox {
+    transform: scale(1.2);
+    accent-color: var(--primary-color);
+}
+
+.edit-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.edit-link:hover {
+    color: deeppink;
+    text-decoration: underline;
+}
+
+.delete-container {
+    text-align: center;
+}
+
+.delete-btn {
+    background: #ff4444;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+    box-shadow: 0 0 15px #ff4444;
+}

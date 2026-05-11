@@ -1,0 +1,1 @@
+ <p>© Kaykay 2025. Tous droits réservés.</p>
