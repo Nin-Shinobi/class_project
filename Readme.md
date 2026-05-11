@@ -92,24 +92,7 @@
 ---
 
 
-## 🚨 Installation — Accès au Système
-
-```bash
-# Cloner le dépôt
-git clone https://github.com/ton-pseudo/school_projects.git
-
-# Accéder au dossier
-cd school_projects
-
-# Compiler un projet C
-cd langage_c
-gcc projet_final.c -o projet_final && ./projet_final
-
-# Lancer un projet PHP (nécessite XAMPP ou équivalent)
-# → Placer le dossier php/ dans htdocs/
-# → Accéder via http://localhost/php/
-
-🚀 Objectifs
+## 🚀 Objectifs
 
     Centraliser tous mes projets ESGIS en un seul endroit
     Suivre ma progression au fil des semestres
