@@ -98,7 +98,7 @@
     Suivre ma progression au fil des semestres
     Constituer un portfolio technique pour mes futures opportunités
 
-⚙️ Prérequis
+## ⚙️ Prérequis
 
 Selon le projet que vous souhaitez exécuter :
 
@@ -106,9 +106,8 @@ Selon le projet que vous souhaitez exécuter :
     PHP / MySQL : Serveur local (XAMPP, WampServer, Laragon)
     HTML / CSS : N'importe quel navigateur moderne
 
-📬 Contact
+## 📬 Contact
 
 Étudiant à ESGIS — Pour toute question ou suggestion, n'hésitez pas à ouvrir une issue ou me contacter directement.
 
 📌 Note : Ce dépôt est en constante évolution — nouveaux projets ajoutés au fil de la formation.
-```
