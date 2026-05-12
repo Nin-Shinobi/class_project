@@ -6,7 +6,7 @@ $nom = $_POST['nom'];
 $email = $_POST['email'];
 $message = $_POST['msg'];
 
-if ($id > 0) {
+if (isset($id)) {
     $req = sprintf("UPDATE contact SET nom = '%s', email = '%s', message = '%s' WHERE id = %d",$nom, $email, $message, $id);
 } else {
     $req = sprintf("INSERT INTO contact (nom, email, message) VALUES ('%s', '%s', '%s')", $nom, $email, $message);

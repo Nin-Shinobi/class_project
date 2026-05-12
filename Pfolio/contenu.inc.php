@@ -5,6 +5,8 @@ if(!isset($_GET['pg'])){
     switch($_GET['pg']){
         case 'ser': include('service.inc.php');
             break;
+        case 'log': include('login.inc.php');
+            break;
         case 'app': include('apropos.inc.php');
             break;
         case 'con': include('contact.inc.php');

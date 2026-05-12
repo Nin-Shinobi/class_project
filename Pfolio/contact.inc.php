@@ -20,10 +20,10 @@ if(isset($_GET['id'])) {
             <div class="dm">
                 <h2>Contact</h2>
                 <form id="contact-form" method='post' action='index.php?pg=ins'>
-                    <input type="text" placeholder="Nom" required name='nom' <?php if (isset($enreg)) echo "value = $nom";?> >
-                    <input type="email" placeholder="Email" required name='email' <?php if (isset($enreg)) echo "value = $email";?> >
+                    <input type="text" placeholder="Nom" required name='nom' <?php if (isset($enreg)) echo "value = '$nom'";?> >
+                    <input type="email" placeholder="Email" required name='email' <?php if (isset($enreg)) echo "value = '$email'";?> >
                     <textarea placeholder="Votre message" rows="5" required name='msg'><?php if (isset($enreg)) echo "$message";?></textarea>
-                    <input type='hidden' name='id' <?php if (isset($enreg)) echo "value = $id"?> >
+                    <?php if (isset($enreg)) echo "<input type='hidden' name='id' value = '$id'>";?>
                     <button class="but" type="submit">Envoyer le message</button>
                 </form>
 
